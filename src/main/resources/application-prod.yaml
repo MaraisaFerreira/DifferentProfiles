@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_profiles?useTimezone=true&serverTimezone=UTC
+    username: ${BD_USER:${db.username}}
+    password: ${BD_PASSWORD:${db.password}}
+  jpa:
+    hibernate:
+      ddl-auto: none
+
