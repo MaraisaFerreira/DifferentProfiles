@@ -1,13 +1,13 @@
 spring:
   application:
     name: DifferentProfiles
+  config:
+    import: "optional:file:./db_credentials.yaml"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    open-in-view: false
   jackson:
     default-property-inclusion: non_empty
   profiles:
-    active: dev
-
-logging:
-  level:
-    root: warn
-    maraisaferreira.com.git: info
-    org.flywaydb: info
+    active: prod
